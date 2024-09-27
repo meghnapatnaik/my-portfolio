@@ -1,0 +1,40 @@
+.landing-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a0e9ff, #ffaff0);
+    text-align: center;
+    color: #333;
+  }
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+.btn {
+    padding: 12px 30px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+.btn:hover {
+    background-color: #ff5a5a;
+  }
+  

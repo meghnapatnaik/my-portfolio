@@ -1,0 +1,208 @@
+.game-container {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+h1 {
+  color: #444;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.lose-message {
+  color: red;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.game-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.6s, opacity 0.6s ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.icon {
+  font-size: 3rem;
+  color: #74b9ff;
+}
+
+.card-back {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfe6e9;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.card.flipped .card-back {
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.styled-dropdown {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  background-color: #74b9ff;
+  color: white;
+  cursor: pointer;
+}
+
+.styled-dropdown:focus {
+  outline: none;
+  border-color: #6c5ce7;
+}
+
+.game-container.game-lost {
+  background-color: #111;
+  filter: brightness(0.5);
+  animation: screen-shake 0.3s infinite;
+  transition: background-color 0.5s, filter 0.5s;
+}
+
+.lose-message {
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: text-glitch 0.2s ease infinite;
+}
+
+@keyframes text-glitch {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes screen-shake {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(5px, 5px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@media (max-width: 768px) {
+  
+  .cards-container {
+    grid-template-columns: repeat(4, 80px); 
+    grid-gap: 8px;
+  }
+
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .card-back {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .game-info {
+    flex-direction: column; 
+    gap: 0.5rem;
+  }
+
+  .styled-dropdown {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 70px);
+    grid-gap: 6px;
+  }
+
+  .card {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .card-back {
+    font-size: 1.4rem;
+  }
+
+  .styled-dropdown {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .game-info {
+    gap: 0.4rem;
+  }
+}
+
