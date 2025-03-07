@@ -6,6 +6,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="content">
+        <img src={`${process.env.PUBLIC_URL}/Meghna.JPG`} alt="Meghna" className="profile-picture" />             
         <h1>
           Hey, I'm{' '}
           <TypeAnimation

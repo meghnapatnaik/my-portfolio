@@ -89,7 +89,7 @@ const Game = () => {
 
   return (
     <div className={`game-container ${gameLost ? 'game-lost' : ''}`}>
-      {gameOver && <Confetti />}
+      {gameOver && <h2 className="win-message">You win!!!!!!</h2>&& <Confetti />}
       {gameLost && <h2 className="lose-message dramatic-loss">You Lose! Try Again.</h2>}
       <h1>Memory Matching Game</h1>
       <div className="game-info">

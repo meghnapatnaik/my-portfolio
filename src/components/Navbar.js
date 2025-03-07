@@ -44,8 +44,9 @@ const Navbar = () => {
           <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
           <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
           <li><a href="#game" className="play-link" onClick={() => setMenuOpen(false)}>Bored? Let's Play!</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          
         </ul>
       </div>
     </nav>

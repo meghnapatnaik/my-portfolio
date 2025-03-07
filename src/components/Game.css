@@ -16,6 +16,12 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.win-message {
+  color:green;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .game-info {
   display: flex;
   justify-content: center;
