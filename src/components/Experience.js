@@ -9,41 +9,53 @@ const Experience = () => {
 
   const experiences = [
     {
-      role: 'Instructional Assistant',
-      company: 'University of North Carolina',
-      description: 'Assisted students with key AI concepts and helped in grading assignments.',
-      details: ['Instructional Assistant for "ITCS 4236/5236: Artificial Intelligence for Computer Games" and "ITCS 6010: Advanced Computer Vision," supporting 75 students. Assisted with grading, administrative tasks, and proctoring exams.',
-      'Established a structured tutoring program that integrated advanced teaching techniques; supported over 50 students throughout the semester, resulting in notable improvements in understanding of challenging subject matter.'
+      role: 'Software Developer',
+      company: 'Data Economy',
+      description: 'Developing scalable web solutions, enhancing security, and optimizing application performance.',
+      details: [
+        'Integrated Keycloak SSO for secure authentication and authorization, improving user management and platform security.',
+        'Configured Vite for rapid development, optimizing builds for improved application performance.',
+        'Developed RESTful APIs using Python Flask, enhancing backend efficiency and data exchange.',
+        'Architected microservices using Java and Spring Boot for scalable backend solutions.',
+        'Designed GraphQL queries to reduce network latency by 40%, improving data fetching efficiency.',
+        'Built dynamic and responsive UI components using React, enhancing user experience.',
+        'Implemented and optimized Redux for state management, ensuring smooth data flow and frontend architecture.'
       ],
-      period: 'Aug 2023 - Present',
+      period: 'May 2024 - Present',
+      icon: faBriefcase
+    },
+    {
+      role: 'Instructional Assistant (TA)',
+      company: 'University of North Carolina at Charlotte',
+      description: 'Assisted students with AI and computer vision concepts, grading, and mentoring.',
+      details: [
+        'Supported students in "Advanced Computer Vision" and "Artificial Intelligence for Games."',
+        'Graded assignments, held office hours, and provided debugging support in ML & AI concepts.',
+        'Designed instructional materials, quizzes, and tutorials for enhanced student learning.'
+      ],
+      period: 'January 2024 - May 2024',
       icon: faGraduationCap
     },
     {
       role: 'Software Engineer',
       company: 'Epam Systems',
-      description: 'Worked as a Full Stack Developer and developed scalable applications and collaborated with the team to optimize backend systems.',
-      details: ['Led the development of a full-stack escalation management application using React, Node.js, Express.js, and MongoDB, improving efficiency and response times for Google support teams.' ,
-    'Integrated Jest for automated testing, reducing execution times by 30%, and Jenkins for continuous integration.',
-       'Developed automated case prioritization, real-time notifications, and improved filtering, boosting user satisfaction by 20%. ' ,
-     ' Ensured high stability by optimizing MongoDB queries, conducting thorough testing, and proactively resolving bugs.'],
-      period: 'Jan 2022 - July 2023',
-      icon: faBriefcase
-    },
-    {
-      role: 'Developer Intern',
-      company: 'Epam Systems',
-      description: 'Contributed to building the Netflix Roulette project using Angular and API integrations.',
-      details: ['Led front-end development and helped integrate APIs. Achieved 30% performance improvement.',
-    'Implemented a continuous integration system using Jenkins for the Netflix Roulette application that streamlined deployment and improved release frequency, leading to a 30% increase in feature delivery timelines.',
-    'Analyzed performance metrics such as load times and API response times, and implemented Angular optimizations like AOT compilation and lazy loading, resulting in a 40% improvement in application performance.',
-    'Optimized data retrieval speed by indexing and query optimization with RDMS.'],
-      period: 'August 2021 - Dec 2021',
+      description: 'Developed scalable applications and optimized backend systems for global clients.',
+      details: [
+        'Led the development of an escalation management platform for Google using React, Node.js, Express.js, and MongoDB, improving efficiency and response times.',
+        'Implemented Jest for automated testing, reducing execution times by 30%, and utilized Jenkins for continuous integration.',
+        'Developed automated case prioritization, real-time notifications, and improved filtering, boosting user satisfaction by 20%.',
+        'Analyzed load times and API response times, implementing Angular optimizations like AOT compilation and lazy loading, resulting in a 40% improvement in application performance.',
+        'Streamlined deployment using Jenkins for continuous integration, increasing feature release frequency by 30%.',
+        'Improved data retrieval speed by optimizing queries and indexing in RDMS.',
+        'Utilized Python Flask for automating data processing workflows, increasing productivity by 30%.'
+      ],
+      period: 'August 2020 - August 2023',
       icon: faLaptopCode
-    },
+    }
   ];
 
   const handleClick = (index) => {
-    setActiveIndex(index === activeIndex ? null : index); 
+    setActiveIndex(index === activeIndex ? null : index);
   };
 
   const handleScroll = () => {
@@ -52,7 +64,7 @@ const Experience = () => {
     const screenPosition = window.innerHeight / 10;
 
     if (sectionPosition < screenPosition) {
-      setInView(true); 
+      setInView(true);
     }
   };
 
